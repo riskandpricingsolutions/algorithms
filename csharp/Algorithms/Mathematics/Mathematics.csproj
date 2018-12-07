@@ -43,6 +43,8 @@
     <Compile Include="PrimeNumbers\IPrimeNumberCalculations.cs" />
     <Compile Include="PrimeNumbers\PrimeNumberCalculationsImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignificantFigures\ISignificantFiguresCalculations.cs" />
+    <Compile Include="SignificantFigures\SignificantFiguresCalculationsImpl.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
