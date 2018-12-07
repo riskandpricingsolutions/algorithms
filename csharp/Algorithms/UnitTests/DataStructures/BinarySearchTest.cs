@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using RiskAndPricingSolutions.Algorithms.DataStructures;
+using RiskAndPricingSolutions.Algorithms.DataStructures.BinarySearch;
 
 namespace RiskAndPricingSolutions.Algorithms.UnitTests.DataStructures
 {

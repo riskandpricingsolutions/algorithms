@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RiskAndPricingSolutions.Algorithms.DataStructures
+namespace RiskAndPricingSolutions.Algorithms.DataStructures.BinarySearch
 {
     public interface IBinarySearch
     {

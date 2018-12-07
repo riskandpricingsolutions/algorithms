@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearchImpl.cs" />
-    <Compile Include="IBinarySearch.cs" />
+    <Compile Include="BinarySearch\BinarySearchImpl.cs" />
+    <Compile Include="BinarySearch\IBinarySearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
