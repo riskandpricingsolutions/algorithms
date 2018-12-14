@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStructures\BinarySearchTest.cs" />
+    <Compile Include="DataStructures\ReverseTest.cs" />
     <Compile Include="Mathematics\PrimeNumberCalculationsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -19,12 +19,13 @@ namespace RiskAndPricingSolutions.Algorithms.UnitTests.Mathematics
             Assert.AreEqual(true, _primeCalc.IsPrime(7));
         }
 
-        [Test]
-        public void TestPrimesLessThanX()
+        [TestCase(4,2)]
+        [TestCase(6, 3)]
+        [TestCase(12, 5)]
+        [TestCase(7, 3)]
+        public void TestPrimesLessThanOrEqualToX(int x, int n)
         {
-            Assert.AreEqual(2, _primeCalc.PrimesLessThanX(4));
-            Assert.AreEqual(3, _primeCalc.PrimesLessThanX(6));
-            Assert.AreEqual(5, _primeCalc.PrimesLessThanX(12));
+            Assert.AreEqual(n, _primeCalc.PrimesLessThanX(x));
         }
 
         [Test]
