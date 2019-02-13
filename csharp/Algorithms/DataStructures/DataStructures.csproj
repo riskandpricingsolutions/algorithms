@@ -46,5 +46,11 @@
     <Compile Include="Reverse\IReverser.cs" />
     <Compile Include="Reverse\SimpleReverser.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="BinarySearch\BinarySearch\D6D39EB8-BBA0-4F27-B385-887C0FED537C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BinarySearch\BinarySearch.md" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
