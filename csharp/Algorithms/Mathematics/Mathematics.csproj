@@ -47,6 +47,8 @@
     <Compile Include="PrimeNumbers\IPrimeNumberCalculations.cs" />
     <Compile Include="PrimeNumbers\PrimeNumberCalculationsImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rounding\IRounding.cs" />
+    <Compile Include="Rounding\Rounding.cs" />
     <Compile Include="SignificantFigures\ISignificantFiguresCalculations.cs" />
     <Compile Include="SignificantFigures\SignificantFiguresCalculationsImpl.cs" />
   </ItemGroup>

@@ -51,6 +51,7 @@
     <Compile Include="Mathematics\FactorialTest.cs" />
     <Compile Include="Mathematics\FibonacciTest.cs" />
     <Compile Include="Mathematics\PrimeNumberCalculationsTest.cs" />
+    <Compile Include="Mathematics\RoundingTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
