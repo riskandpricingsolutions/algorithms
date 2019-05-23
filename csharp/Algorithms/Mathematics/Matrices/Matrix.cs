@@ -35,7 +35,6 @@ namespace RiskAndPricingSolutions.Algorithms.Mathematics.Matrices
                 Buffer.BlockCopy(tmp,0,_backing,0,Buffer.ByteLength(tmp));
                 Buffer.BlockCopy(row,0,_backing,Buffer.ByteLength(tmp),Buffer.ByteLength(row));
             }
-
         }
 
         public Matrix(double[] arr, bool isRow = true)
