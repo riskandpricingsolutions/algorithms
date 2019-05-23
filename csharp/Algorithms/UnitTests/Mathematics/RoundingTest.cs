@@ -1,6 +1,4 @@
-﻿using System;
-using System.Security.Cryptography.X509Certificates;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RiskAndPricingSolutions.Algorithms.Mathematics.Rounding;
 
 namespace RiskAndPricingSolutions.Algorithms.UnitTests.Mathematics

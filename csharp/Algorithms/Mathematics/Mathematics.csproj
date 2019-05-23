@@ -44,6 +44,9 @@
     <Compile Include="Factorial\IFactorialCalculator.cs" />
     <Compile Include="Fibonacci\FibonacciCalculator.cs" />
     <Compile Include="Fibonacci\IFibonacciCalculator.cs" />
+    <Compile Include="Matrices\Matrix.cs" />
+    <Compile Include="Matrices\MatrixOperations.cs" />
+    <Compile Include="Matrices\Point.cs" />
     <Compile Include="PrimeNumbers\IPrimeNumberCalculations.cs" />
     <Compile Include="PrimeNumbers\PrimeNumberCalculationsImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
