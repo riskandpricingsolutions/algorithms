@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Combinatorics\CombinatoricCalculator.cs" />
+    <Compile Include="Combinatorics\ICombinatoricCalculator.cs" />
     <Compile Include="Factorial\FactorialCalculator.cs" />
+    <Compile Include="Factorial\FactorialExtentions.cs" />
     <Compile Include="Factorial\IFactorialCalculator.cs" />
     <Compile Include="Fibonacci\FibonacciCalculator.cs" />
     <Compile Include="Fibonacci\IFibonacciCalculator.cs" />

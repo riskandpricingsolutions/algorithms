@@ -2,7 +2,7 @@
 {
     public interface IFactorialCalculator
     {
-        int FactorialRecursive(int i);
-        int FactorialIterative(int i);
+        long FactorialRecursive(long i);
+        long FactorialIterative(long i);
     }
 }

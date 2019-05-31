@@ -4,7 +4,7 @@ namespace RiskAndPricingSolutions.Algorithms.Mathematics.Factorial
 {
     public class FactorialCalculator : IFactorialCalculator
     {
-        public int FactorialRecursive(int n)
+        public long FactorialRecursive(long n)
         {
             if ( n < 0)
                 throw new ArgumentOutOfRangeException();
@@ -15,7 +15,7 @@ namespace RiskAndPricingSolutions.Algorithms.Mathematics.Factorial
             return n * FactorialRecursive(n - 1);
         }
 
-        public int FactorialIterative(int n)
+        public long FactorialIterative(long n)
         {
             if (n < 0)
                 throw new ArgumentOutOfRangeException();
@@ -23,7 +23,7 @@ namespace RiskAndPricingSolutions.Algorithms.Mathematics.Factorial
             if (n == 0)
                 return 1;
 
-            int result = n;
+            long result = n;
             while (n > 1)
             {
                 result = result * (n-- - 1);
