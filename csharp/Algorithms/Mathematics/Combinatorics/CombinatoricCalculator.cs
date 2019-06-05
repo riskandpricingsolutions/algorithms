@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using RiskAndPricingSolutions.Algorithms.Mathematics.Factorial;
 
@@ -16,10 +15,7 @@ namespace RiskAndPricingSolutions.Algorithms.Mathematics.Combinatorics
             return n.Factorial() / (n - r).Factorial();
         }
 
-        public long CombinationsCount(long n, long r)
-        {
-            throw new System.NotImplementedException();
-        }
+        public long CombinationsCount(long n, long r) => n.Factorial() / ((n - r).Factorial() * r.Factorial());
 
         public IList<TElementType[]> GeneratePermutations<TElementType>(TElementType[] nObjects, int r, bool allowRepetitions)
         {
@@ -37,13 +33,13 @@ namespace RiskAndPricingSolutions.Algorithms.Mathematics.Combinatorics
                 Array.Copy(current, copy, r);
                 copy[idx] = n;
 
-                IList<TElementType> adjustedNObjs =
+                IList<TElementType> adjustedNObj =
                     allowRepetitions ? nObjects : nObjects.Where(x => !x.Equals(n)).ToList();
 
                 if (idx == r - 1)
                     permutations.Add(copy);
                 else
-                    GeneratePermutationsRecursive(copy, adjustedNObjs, idx + 1, r, permutations,allowRepetitions);
+                    GeneratePermutationsRecursive(copy, adjustedNObj, idx + 1, r, permutations,allowRepetitions);
             }
         }
 
