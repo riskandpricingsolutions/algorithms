@@ -3,60 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using RiskAndPricingSolutions.Algorithms.Mathematics.Combinatorics;
+using static System.Console;
 
 namespace RiskAndPricingSolutions.Algorithms.UnitTests.Mathematics
 {
     [TestFixture]
     public class CombinatoricsTest
     {
-        private readonly ICombinatoricCalculator _combinatoricCalculator = new CombinatoricCalculator();
+        private readonly IPossibilityGenerator _combinatoricCalculator = new PossibilityGenerator();
 
         [TestCase(3, 2, 9)]
         public void TestPermutationsWithRepeating(long n, long r, long exp)
         {
-            Assert.AreEqual(exp, _combinatoricCalculator.PermutationsCount(n, r, true));
+            Assert.AreEqual(exp, _combinatoricCalculator.NTupleCount(n, r));
         }
 
         [TestCase(3, 2, 6)]
         public void TestPermutationsWithoutRepeating(long n, long r, long exp)
         {
-            var result = _combinatoricCalculator.GeneratePermutations(new Char[] {'a', 'b', 'c'}, 2, false);
-            Assert.AreEqual(6, result.Count);
+            var result = _combinatoricCalculator.GeneratePermutations(new Char[] {'1', '2', '3','4'});
+            foreach (var c in result) WriteLine(c.Aggregate("",(c1, c2) => $"{c1} {c2}"));
         }
 
         [Test]
         public void TestGetPermutationsWithRepeating()
         {
-            var result = _combinatoricCalculator.GeneratePermutations(new Char[] {'a', 'b', 'c'}, 2, true);
-            Assert.AreEqual(9, result.Count);
-        }
-
-        [Test]
-        public void TestNTuples()
-        {
-            string[][] events =
-            {
-                new[] {"a", "b"},
-                new[] {"i", "ii", "iii"},
-                new[] {"1"},
-            };
-
-            var result = NTupleGenerator
-                .CalculateNTuples(new string[3], events)
-                .ToList();
-
-            var expectedResult = new List<string[]>
-            {
-                new[] {"a", "i", "1"},
-                new[] {"b", "i", "1"},
-                new[] {"a", "ii", "1"},
-                new[] {"b", "ii", "1"},
-                new[] {"a", "iii", "1"},
-                new[] {"b", "iii", "1"},
-            };
-
-            for (int i = 0; i < result.Count; i++)
-                Assert.AreEqual(expectedResult[i], result[i]);
+            var result = _combinatoricCalculator.GenerateNTuples(new Char[] {'a', 'b', 'c'});
+            Assert.AreEqual(27, result.Count());
         }
 
         [Test]

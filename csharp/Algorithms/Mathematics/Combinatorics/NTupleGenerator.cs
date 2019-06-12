@@ -1,11 +1,36 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
+using System.Linq;
 
 namespace RiskAndPricingSolutions.Algorithms.Mathematics.Combinatorics
 {
     public class NTupleGenerator
     {
+        public static void Permutate()
+        {
+            // Consider the sequence (0,1,2,5,3,3,0)
+            //
+            // To find the next permutation we want to increase the sequence but 
+            // increase it as little as possible. To do this we need to first 
+            // identify the longest suffix that is non-increasing (from left to right)
+            // This will have at least one element. In order case we have
+            // Prefix:Suffix (0,1,2):(5,3,3,0)
+            // The element immediately to the left of the suffix is called the pivot. In this
+            // case the pivot is 2.
+            //
+            // We now swap the pivot with the smallest element in the suffix that is greater than the pivot
+            // In our case the right most 3. We now get
+            // Prefix:Suffix (0,1,3):(5,3,2,0)
+
+
+
+
+
+        }
+
+
         public static IEnumerable<int[]> CalculateNumberCombinations(int numDigits, int @base)
         {
             var temp = new int[numDigits];
@@ -19,7 +44,7 @@ namespace RiskAndPricingSolutions.Algorithms.Mathematics.Combinatorics
 
 
                 int j = 0;
-                while (j < temp.Length && temp[j] == @base-1)
+                while (j < temp.Length && temp[j] == @base - 1)
                 {
                     temp[j] = 0;
                     j++;
@@ -35,40 +60,43 @@ namespace RiskAndPricingSolutions.Algorithms.Mathematics.Combinatorics
             }
         }
 
-        public static IEnumerable<T[]> CalculateNTuples<T>(T[] sequence, T[][] events)
+
+
+        public void Permutate(int[] elements)
         {
-            int[] seqIndices = new int[sequence.Length];
+            //if (elements.Length <= 1)
+            //    return Enumerable.Empty<int[]>();
 
-            while (true)
+            // L2: Find last j such that self[j] <= self[j+1]. Terminate if no such j
+            // exists.
+            var j = elements.Length - 2;
+            while (j >= 0 && elements[j] > elements[j + 1])
             {
-                // Process the current value. Convert indices to elements
-                T[] ntuple = new T[sequence.Length];
-                for (int i = 0; i < sequence.Length; i++)
-                    ntuple[i] = events[i][seqIndices[i]];
+                j -= 1;
+            }
 
-                // Return the n-tuple
-                yield return ntuple;
+            //// L3: Find last l such that self[j] <= self[l], then exchange elements j and l:
+            var l = elements.Length - 1;
+            while (elements[j] > elements[l])
+            {
+                l -= 1;
+            }
 
-                // In this algorithm we treat  the indices array as a
-                // n digit number where the base of each digit is determined by the
-                // number of elements in that digits corresponding event array from events. 
-                // Moving to the next n-tuple is then a  case of incrementing the 
-                // n-digit number held in seqIndices. To this we need to take care of 
-                // overflow which is what the following loop condition does.		
-                int j = 0;
-                while (j < sequence.Length && seqIndices[j] == events[j].Length - 1)
-                {
-                    seqIndices[j] = 0;
-                    j++;
-                }
+            // swap
+            int temp = elements[j];
+            elements[j] = elements[l];
+            elements[l] = temp;
 
-                // If j is greater than the last element in seqIndices we have overflowed
-                // off the end of seqIndices. In this case the work of this algorithm is done
-                // and we have visited all n-permutations
-                if (j == sequence.Length)
-                    break;
-
-                seqIndices[j]++;
+            // L4: Reverse elements j+1 ... count-1:
+            var lo = j + 1;
+            var hi = elements.Length - 1;
+            while (lo < hi)
+            {
+                temp = elements[lo];
+                elements[lo] = elements[hi];
+                elements[hi] = temp;
+                lo += 1;
+                hi -= 1;
             }
         }
     }

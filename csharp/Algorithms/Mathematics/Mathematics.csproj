@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Combinatorics\CombinatoricCalculator.cs" />
-    <Compile Include="Combinatorics\ICombinatoricCalculator.cs" />
+    <Compile Include="Combinatorics\PossibilityGenerator.cs" />
+    <Compile Include="Combinatorics\IPossibilityGenerator.cs" />
     <Compile Include="Combinatorics\NTupleGenerator.cs" />
     <Compile Include="Factorial\FactorialCalculator.cs" />
     <Compile Include="Factorial\FactorialExtentions.cs" />
