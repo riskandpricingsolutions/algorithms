@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="DataStructures\BinarySearchTest.cs" />
     <Compile Include="DataStructures\ReverseTest.cs" />
+    <Compile Include="DataStructures\SinglyLinkedListTest.cs" />
+    <Compile Include="DataStructures\StackTest.cs" />
     <Compile Include="Mathematics\AffineMatrixOperations.cs" />
     <Compile Include="Mathematics\CombinatorialTest.cs" />
     <Compile Include="Mathematics\FactorialTest.cs" />

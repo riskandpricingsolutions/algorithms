@@ -45,12 +45,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reverse\IReverser.cs" />
     <Compile Include="Reverse\SimpleReverser.cs" />
+    <Compile Include="SinglyLinkedList\ISinglyLinkedList.cs" />
+    <Compile Include="SinglyLinkedList\SinglyLinkedList.cs" />
+    <Compile Include="Stack\IStack.cs" />
+    <Compile Include="Stack\StackImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BinarySearch\BinarySearch\D6D39EB8-BBA0-4F27-B385-887C0FED537C.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BinarySearch\BinarySearch.md" />
+    <None Include="SinglyLinkedList\Notes\SinglyLinkedList.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SinglyLinkedList\Notes\Resources\" />
+    <Folder Include="Stack\Notes\Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
