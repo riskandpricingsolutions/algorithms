@@ -42,11 +42,14 @@
   <ItemGroup>
     <Compile Include="BinarySearch\BinarySearchImpl.cs" />
     <Compile Include="BinarySearch\IBinarySearch.cs" />
+    <Compile Include="Lists\ArrayList\ArrayList.cs" />
+    <Compile Include="Lists\DoublyLinkedList\SinglyLinkedList.cs" />
+    <Compile Include="Lists\IArrayList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reverse\IReverser.cs" />
     <Compile Include="Reverse\SimpleReverser.cs" />
-    <Compile Include="SinglyLinkedList\ISinglyLinkedList.cs" />
-    <Compile Include="SinglyLinkedList\SinglyLinkedList.cs" />
+    <Compile Include="Lists\ILinkedList.cs" />
+    <Compile Include="Lists\SinglyLinkedList\LinkedList.cs" />
     <Compile Include="Stack\IStack.cs" />
     <Compile Include="Stack\StackImpl.cs" />
   </ItemGroup>
@@ -55,10 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BinarySearch\BinarySearch.md" />
-    <None Include="SinglyLinkedList\Notes\SinglyLinkedList.md" />
+    <None Include="Lists\SinglyLinkedList\Notes\SinglyLinkedList.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SinglyLinkedList\Notes\Resources\" />
+    <Folder Include="Lists\SinglyLinkedList\Notes\Resources\" />
+    <Folder Include="Queue\" />
     <Folder Include="Stack\Notes\Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

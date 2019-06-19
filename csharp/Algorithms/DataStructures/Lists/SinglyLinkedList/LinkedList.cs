@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using RiskAndPricingSolutions.Algorithms.DataStructures.LinkedList;
 
-namespace RiskAndPricingSolutions.Algorithms.DataStructures.SinglyLinkedList
+namespace RiskAndPricingSolutions.Algorithms.DataStructures.Lists.SinglyLinkedList
 {
-    public class SinglyLinkedListImpl<T> : ISinglyLinkedList<T>
+    public class LinkedListImpl<T> : ILinkedList<T>
     {
         /// <summary>
-        /// Add the data to the front of the list
+        /// Add an element to the front of the list
         /// O(1) operation. The number of elements in the 
         /// list has no impact. The cost is
         ///   1) A single object instantiation
@@ -14,7 +15,7 @@ namespace RiskAndPricingSolutions.Algorithms.DataStructures.SinglyLinkedList
         ///   3) A single equality comparison
         ///   4) A single integer increment
         /// </summary>
-        /// <param name="data">The data item to stick on the front</param>
+        /// <param name="data">The data element to prepend to the front</param>
         public void AddFirst(T data)
         {
             Node<T> newNode = new Node<T>
@@ -31,7 +32,7 @@ namespace RiskAndPricingSolutions.Algorithms.DataStructures.SinglyLinkedList
         }
 
         /// <summary>
-        /// Add the data to the back of the list.
+        /// Add the data element to the back of the list.
         /// O(1) operation. The number of elements in 
         /// the list has no impact. The cost is
         ///     1) A single integer instantiation
@@ -72,8 +73,8 @@ namespace RiskAndPricingSolutions.Algorithms.DataStructures.SinglyLinkedList
         }
 
         /// <summary>
-        /// Remove the last element. SInce we have no back
-        /// pointer in all but the simplest cases we need
+        /// Remove the last element. Since we have no back
+        /// pointer, in all but the simplest cases we need
         /// to perform a traversal so the running time is 
         /// O(N)
         /// </summary>
@@ -86,7 +87,7 @@ namespace RiskAndPricingSolutions.Algorithms.DataStructures.SinglyLinkedList
                     _first = _last = null;
                 else
                 {
-                    // This is tricky. We dont have a 
+                    // This is tricky. We don't have a 
                     // back pointer so we need to traverse.
                     Node<T> current = _first;
                     Node<T> previous = _first;
@@ -124,6 +125,12 @@ namespace RiskAndPricingSolutions.Algorithms.DataStructures.SinglyLinkedList
             return false;
         }
 
+        /// <summary>
+        /// Removal is an O(N) operation on a linked list
+        /// as it requires a traversal
+        /// </summary>
+        /// <param name="value">The element to be removed</param>
+        /// <returns></returns>
         public bool Remove(T value)
         {
             Node<T> current = _first;
@@ -141,7 +148,7 @@ namespace RiskAndPricingSolutions.Algorithms.DataStructures.SinglyLinkedList
                 // If the first element in the list is our match
                 // we set the first to be the second element. If 
                 // there is no second element current.Next will be
-                // null so we dont have to do anything
+                // null so we don't have to do anything
                 if (_first == current)
                     _first = current.Next;
 

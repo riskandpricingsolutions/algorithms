@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace RiskAndPricingSolutions.Algorithms.DataStructures.SinglyLinkedList
+namespace RiskAndPricingSolutions.Algorithms.DataStructures.LinkedList
 {
-    public interface ISinglyLinkedList<T> : IEnumerable<T>
+    public interface ILinkedList<T> : IEnumerable<T>
     {
         void AddFirst(T data);
 

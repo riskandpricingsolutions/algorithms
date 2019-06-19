@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Linq;
 using NUnit.Framework;
-using RiskAndPricingSolutions.Algorithms.DataStructures.SinglyLinkedList;
+using RiskAndPricingSolutions.Algorithms.DataStructures.LinkedList;
+using RiskAndPricingSolutions.Algorithms.DataStructures.Lists.SinglyLinkedList;
 
 namespace RiskAndPricingSolutions.Algorithms.UnitTests.SinglyLinkedList
 {
     [TestFixture]
     public class SinglyLinkedListTest
     {
-        private readonly ISinglyLinkedList<int> _list = new SinglyLinkedListImpl<int>();
+        private readonly ILinkedList<int> _list = new LinkedListImpl<int>();
 
         [Test]
         public void Test()
