@@ -52,6 +52,8 @@
     <Compile Include="Lists\SinglyLinkedList\LinkedList.cs" />
     <Compile Include="Stack\IStack.cs" />
     <Compile Include="Stack\StackImpl.cs" />
+    <Compile Include="SymbolTable\ISymbolTable.cs" />
+    <Compile Include="SymbolTable\LinkedListSymbolTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BinarySearch\BinarySearch\D6D39EB8-BBA0-4F27-B385-887C0FED537C.png" />
