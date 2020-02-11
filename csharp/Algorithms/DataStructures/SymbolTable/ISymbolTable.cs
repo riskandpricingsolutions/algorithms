@@ -2,22 +2,18 @@
 
 namespace RiskAndPricingSolutions.Algorithms.DataStructures.SymbolTable
 {
-    public interface ISymbolTable<TKey,TVal>
+    public interface ISymbolTable<TKey,TVal> : IEnumerable<KeyValuePair<TKey, TVal>>
     {
-        void Put(TKey key, TVal value);
-
-        TVal Get(TKey key);
+        TVal this[TKey key] { get; set; }
 
         bool TryGetValue(TKey key, out TVal value);
 
-        IEnumerable<TKey> Keys();
+        IEnumerable<TKey> Keys { get; }
 
-        IEnumerable<KeyValuePair<TKey, TVal>> KeyValues();
+        IEnumerable<TVal> Values { get; }
 
         long Count { get; }
-        
 
+        void Delete(TKey key);
     }
-
-    
 }

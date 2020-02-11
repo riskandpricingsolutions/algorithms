@@ -24,7 +24,7 @@ namespace RiskAndPricingSolutions.Algorithms.UnitTests.DataStructures
                         foreach (var word in words)
                         {
                             table.TryGetValue(word, out var val);
-                            table.Put(word, val + 1);
+                            table[word]= val + 1;
                         }
                     }
                 }
@@ -37,10 +37,10 @@ namespace RiskAndPricingSolutions.Algorithms.UnitTests.DataStructures
             string[] keys = input.Split();
 
             for (int i = 0; i < keys.Length; i++)
-                table.Put(keys[i],i);
+                table[keys[i]]=i;
 
-            foreach (var key in table.Keys())
-                WriteLine($"{key} {table.Get(key)}");
+            foreach (var key in table.Keys)
+                WriteLine($"{key} {table[key]}");
         }
     }
 }

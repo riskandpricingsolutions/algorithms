@@ -52,6 +52,14 @@
     <Compile Include="Lists\SinglyLinkedList\LinkedList.cs" />
     <Compile Include="Stack\IStack.cs" />
     <Compile Include="Stack\StackImpl.cs" />
+    <Compile Include="SymbolTable\BST\BinarySearchTreeRecursive.cs" />
+    <Compile Include="SymbolTable\BST\IBinarySearchTree.cs" />
+    <Compile Include="SymbolTable\BST\IOrderedSymbolTable.cs" />
+    <Compile Include="SymbolTable\BST\Printing\BinarySearchTreePrinter.cs" />
+    <Compile Include="SymbolTable\BST\Printing\GenericTreePrinter.cs" />
+    <Compile Include="SymbolTable\BST\Printing\ITreePrinter.cs" />
+    <Compile Include="SymbolTable\BST\RecursiveTreeTraversals.cs" />
+    <Compile Include="SymbolTable\BST\TreeNode.cs" />
     <Compile Include="SymbolTable\ISymbolTable.cs" />
     <Compile Include="SymbolTable\LinkedListSymbolTable.cs" />
   </ItemGroup>
