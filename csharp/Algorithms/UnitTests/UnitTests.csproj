@@ -49,6 +49,7 @@
     <Compile Include="DataStructures\BinarySearchTest.cs" />
     <Compile Include="DataStructures\BinarySearchTreeRecursiveTest.cs" />
     <Compile Include="DataStructures\LinkedListSymbolTableTest.cs" />
+    <Compile Include="DataStructures\PriorityHeapTest.cs" />
     <Compile Include="DataStructures\ReverseTest.cs" />
     <Compile Include="DataStructures\ArrayList.cs" />
     <Compile Include="DataStructures\SinglyLinkedListTest.cs" />

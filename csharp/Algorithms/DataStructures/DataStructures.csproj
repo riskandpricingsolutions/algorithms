@@ -42,9 +42,11 @@
   <ItemGroup>
     <Compile Include="BinarySearch\BinarySearchImpl.cs" />
     <Compile Include="BinarySearch\IBinarySearch.cs" />
+    <Compile Include="PriorityQueues\Heap.cs" />
     <Compile Include="Lists\ArrayList\ArrayList.cs" />
     <Compile Include="Lists\DoublyLinkedList\SinglyLinkedList.cs" />
     <Compile Include="Lists\IArrayList.cs" />
+    <Compile Include="PriorityQueues\IPriorityQueue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reverse\IReverser.cs" />
     <Compile Include="Reverse\SimpleReverser.cs" />
